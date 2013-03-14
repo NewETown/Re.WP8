@@ -1,0 +1,106 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Re.Results"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:vm="clr-namespace:Re.ViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="clr-namespace:Re.ViewModels"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="False">
+    
+    <phone:PhoneApplicationPage.Resources>
+       <vm:ResultViewModel x:Key="viewModel" />
+        
+        <DataTemplate x:Key="ResultItemTemplate">
+                <StackPanel Margin="6,6"
+                            Width="Auto" 
+                            Height="Auto" 
+                            Background="{Binding TileColor}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" 
+                               Text="{Binding Title}" 
+                               TextWrapping="Wrap" 
+                               Margin="0,0,0,10" 
+                               FontWeight="Bold" />
+                        <TextBlock Grid.Row="1" 
+                               Text="{Binding Description}" 
+                               TextWrapping="Wrap" 
+                               FontStyle="Italic" 
+                               FontSize="11"/>
+                    </Grid>
+                </StackPanel>
+        </DataTemplate>
+        
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#828282">        
+        <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+        -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".15*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Re:Search - Results" />
+            
+        </Grid>
+
+        <phone:LongListSelector 
+            Grid.Row="1"
+            x:Name="lbxOutput"
+            DataContext="{StaticResource viewModel}"
+            ItemsSource="{Binding WebResultCollection}"
+            ItemTemplate="{StaticResource ResultItemTemplate}"
+            GridCellSize="225, 150"
+            LayoutMode="Grid"
+            ListFooter="{Binding}"
+            />
+        
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="btnReSearch" Content="Re:Search" />
+            <Button Grid.Column="1" x:Name="btnViewPages" Content="View Pages" />
+            <ListBox Grid.Column="3" x:Name="gvwQuery" SelectionMode="Multiple" Height="50" VerticalAlignment="Center">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Word}" Height="50" Padding="0,0,10,0" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

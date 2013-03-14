@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>HttpHelper</id>
+    <version>0.9.0</version>
+    <title>HttpHelper</title>
+    <authors>Outercurve Foundation</authors>
+    <owners>Outercurve Foundation</owners>
+    <licenseUrl>https://github.com/facebook-csharp-sdk/http-helper/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/facebook-csharp-sdk/http-helper</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Mockable HTTP Helper for.NET2.0+/SL4+/WP7/WinRT (supports Task Parallel Library/async/await)</description>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>HttpHelper web REST HTTP API services wrapper FluentHttp</tags>
+    <references />
+  </metadata>
+</package>
