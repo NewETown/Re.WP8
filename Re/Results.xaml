@@ -8,6 +8,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodels="clr-namespace:Re.ViewModels"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -22,7 +23,8 @@
                 <StackPanel Margin="6,6"
                             Width="Auto" 
                             Height="Auto" 
-                            Background="{Binding TileColor}">
+                            Background="{Binding TileColor}"
+                            Tap="ResultItemSelected">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
@@ -72,6 +74,7 @@
             
         </Grid>
 
+        <!--
         <phone:LongListSelector 
             Grid.Row="1"
             x:Name="lbxOutput"
@@ -81,8 +84,23 @@
             GridCellSize="225, 150"
             LayoutMode="Grid"
             ListFooter="{Binding}"
+            SelectionChanged="lbxOutput_SelectionChanged"
+            />
+        -->
+        <toolkit:LongListMultiSelector
+            Grid.Row="1"
+            x:Name="lbxOutput"
+            DataContext="{StaticResource viewModel}"
+            ItemsSource="{Binding WebResultCollection}"
+            ItemTemplate="{StaticResource ResultItemTemplate}"
+            GridCellSize="225, 150"
+            LayoutMode="Grid"
+            ListFooter="{Binding}"
+            IsSelectionEnabledChanged="OnGridSelectorIsSelectionEnabledChanged"
+            SelectionChanged="lbxOutput_SelectionChanged"
             />
         
+        <!--
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -100,7 +118,13 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
+        -->
 
     </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="False" IsMenuEnabled="True">
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>
