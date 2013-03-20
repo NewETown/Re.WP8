@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Xml.Linq;
+using HtmlAgilityPack;
 using Re.Common;
 using Re.Model;
 
@@ -17,6 +20,9 @@ namespace Re.ViewModels
     public class ResultViewModel:INotifyPropertyChanged
     {
         private bool _isLoading = false;
+        // General info we need to parse the XML later
+        private XNamespace xmlns = "http://schemas.microsoft.com/ado/2007/08/dataservices";
+        private XNamespace xmlnsm = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata";
 
         public bool IsLoading
         {
@@ -56,7 +62,7 @@ namespace Re.ViewModels
             String strBingAppID = "xmGJ+CFOgZtjSJhZWOb0QnxTa3KBu3LFB1I8Fd+pQPU=";
             var byteArray = Encoding.UTF8.GetBytes(strBingAppID + ":" + strBingAppID);
             // Everything in mobile is a URI, so we make a URI
-            Uri uri = new Uri("https://api.datamarket.azure.com/Bing/Search/v1/Web?Query=%27" + _searchTerms + "%27&$top=40");
+            Uri uri = new Uri("https://api.datamarket.azure.com/Bing/Search/v1/Web?Query=%27" + _searchTerms.Trim(' ') + "%27&$top=40");
             string _cred = String.Format("{0} {1}", "Basic", Convert.ToBase64String(byteArray));
 
             HttpWebRequest queryRequest = (HttpWebRequest)WebRequest.Create(uri);
@@ -69,9 +75,6 @@ namespace Re.ViewModels
 
         private void ReadCallback(IAsyncResult asyncResult)
         {
-            // General info we need to parse the XML later
-            XNamespace xmlns = "http://schemas.microsoft.com/ado/2007/08/dataservices";
-            XNamespace xmlnsm = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata";
 
             // Gets state info
             HttpWebRequest requestState = (HttpWebRequest)asyncResult.AsyncState;
@@ -111,6 +114,14 @@ namespace Re.ViewModels
                         this.WebResultCollection.Add(item);
                     }
                     IsLoading = false;
+                });
+
+                Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                    foreach (WebResult result in results)
+                    {
+                        GetMetaTags(result);
+                    }
                 });
 
             }
@@ -169,6 +180,65 @@ namespace Re.ViewModels
             );
 
             return output;
+        }
+
+        private async void GetMetaTags(WebResult r) //Task<string>
+        {
+            /*string keywords = string.Empty;
+
+            return this.RemoveStopWords(keywords);*/
+
+            Uri uri = new Uri(r.Url);
+
+            HttpWebRequest queryRequest = (HttpWebRequest)WebRequest.Create(uri);
+
+            queryRequest.BeginGetResponse(new AsyncCallback(MetaTagCallback), queryRequest);
+
+        }
+
+        private void MetaTagCallback(IAsyncResult result)
+        {
+            string keywords = string.Empty;
+            Stream _stream;
+            try
+            {
+                HttpWebRequest requestState = (HttpWebRequest)result.AsyncState;
+                HttpWebResponse queryResponse = (HttpWebResponse)requestState.EndGetResponse(result);
+                _stream = queryResponse.GetResponseStream();
+                //string html = _stream.ToString();
+                XDocument hdoc = XDocument.Load(_stream);
+
+                IEnumerable<Keyword> results = from r in hdoc.Descendants(xmlnsm + "meta")
+                                               select new Keyword
+                                                 {
+                                                     Word = r.Element(xmlns + "name").Value,
+                                                 };
+
+                results.ToList();
+
+                /* var results = hdoc.Descendants("meta")
+                                  .Where(x =>
+                                       x.Attributes.Contains("name") &&
+                                              x.Attributes["name"].Value.Contains("keywords")); 
+
+                List<HtmlNode> metaNodes = results.ToList();
+                foreach (HtmlNode node in metaNodes)
+                {
+                    keywords += node.Attributes["content"].Value;
+                }*/
+            }
+            catch
+            {
+                // keywords = r.Title;
+                Debug.WriteLine("Caught");
+            }
+
+            if (keywords == string.Empty)
+            {
+                //keywords = r.Title;
+
+                Debug.WriteLine("Empty keywords");
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
