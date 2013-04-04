@@ -15,6 +15,7 @@ using HtmlAgilityPack;
 using Re.Common;
 using Re.Model;
 
+
 namespace Re.ViewModels
 {
     public class ResultViewModel:INotifyPropertyChanged
@@ -75,17 +76,16 @@ namespace Re.ViewModels
 
         private void ReadCallback(IAsyncResult asyncResult)
         {
-
-            // Gets state info
-            HttpWebRequest requestState = (HttpWebRequest)asyncResult.AsyncState;
-            HttpWebResponse queryResponse = (HttpWebResponse)requestState.EndGetResponse(asyncResult);
-
-            Stream resultStream;
-
-            string xmlHolder = "";
-
             try
             {
+                // Gets state info
+                HttpWebRequest requestState = (HttpWebRequest)asyncResult.AsyncState;
+                HttpWebResponse queryResponse = (HttpWebResponse)requestState.EndGetResponse(asyncResult);
+
+                Stream resultStream;
+
+                string xmlHolder = "";
+
                 // First we need to get the response stream
                 resultStream = queryResponse.GetResponseStream();
 
@@ -116,25 +116,18 @@ namespace Re.ViewModels
                     IsLoading = false;
                 });
 
-                Deployment.Current.Dispatcher.BeginInvoke(() =>
-                {
-                    foreach (WebResult result in results)
-                    {
-                        GetMetaTags(result);
-                    }
-                });
-
             }
             catch (Exception e)
             {
                 Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
                     MessageBox.Show("Network error occured " + e.Message);
+                    Debug.WriteLine("ERROR: " + e.Message);
                 });
             }
         }
 
-        public string RemoveStopWords(string input)
+        private static string RemoveStopWords(string input)
         {
             // These are the words to remove to make the keywords more useful
             var stopWords = new HashSet<string> { "a", "about", "above", "above", "across", "after", "afterwards", "again", "against", "all",
@@ -182,18 +175,12 @@ namespace Re.ViewModels
             return output;
         }
 
-        private async void GetMetaTags(WebResult r) //Task<string>
+        public static async Task<string> CallAsync(Uri uri)
         {
-            /*string keywords = string.Empty;
-
-            return this.RemoveStopWords(keywords);*/
-
-            Uri uri = new Uri(r.Url);
-
-            HttpWebRequest queryRequest = (HttpWebRequest)WebRequest.Create(uri);
-
-            queryRequest.BeginGetResponse(new AsyncCallback(MetaTagCallback), queryRequest);
-
+            WebClient client = new WebClient();
+            string response = await client.DownloadStringTaskAsync(uri);
+            var words = RemoveStopWords(response);
+            return words;
         }
 
         private void MetaTagCallback(IAsyncResult result)
@@ -208,13 +195,13 @@ namespace Re.ViewModels
                 //string html = _stream.ToString();
                 XDocument hdoc = XDocument.Load(_stream);
 
-                IEnumerable<Keyword> results = from r in hdoc.Descendants(xmlnsm + "meta")
+                IEnumerable<Keyword> results = from r in hdoc.Descendants("head")
                                                select new Keyword
                                                  {
-                                                     Word = r.Element(xmlns + "name").Value,
+                                                     Word = r.Element("title").Value
                                                  };
 
-                results.ToList();
+                var list = results.ToList();
 
                 /* var results = hdoc.Descendants("meta")
                                   .Where(x =>

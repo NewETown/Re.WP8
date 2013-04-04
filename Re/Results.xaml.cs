@@ -35,7 +35,7 @@ namespace Re
         // ApplicationBar buttons
         ApplicationBarIconButton resultMultiSelectButton;
         ApplicationBarIconButton reSearchButton;
-        ApplicationBarIconButton openMultiPageButton;
+        //ApplicationBarIconButton openMultiPageButton; -- NYI
 
         public Results()
         {
@@ -122,10 +122,12 @@ namespace Re
             resultMultiSelectButton.Text = "select";
             resultMultiSelectButton.Click += resultMultiSelectButton_Click;
 
+            /*
             openMultiPageButton = new ApplicationBarIconButton();
             openMultiPageButton.IconUri = new Uri("/Toolkit.Content/ApplicationBar.Upload.png", UriKind.RelativeOrAbsolute);
             openMultiPageButton.Text = "open";
             openMultiPageButton.Click += openMultiPageButton_Click;
+             */
 
         }
 
@@ -181,9 +183,9 @@ namespace Re
             }
         }
 
-        void reSearchButton_Click(object sender, EventArgs e)
+        async void reSearchButton_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("Pressed the reSearchButton");
+            string searchTerms = await ResultViewModel.CallAsync(new Uri("http://www.google.com", UriKind.Absolute));
         }
 
         void resultMultiSelectButton_Click(object sender, EventArgs e)
