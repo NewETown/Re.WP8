@@ -75,10 +75,8 @@ C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\Microsoft.Advert
 C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\Microsoft.Advertising.Mobile.xml
 C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\HtmlAgilityPack.dll
 C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
-C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\Newtonsoft.Json.dll
 C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\HtmlAgilityPack.pdb
 C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\HtmlAgilityPack.xml
-C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\Newtonsoft.Json.xml
 C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\obj\Debug\Re.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\obj\Debug\App.g.cs
 C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\obj\Debug\Common\StandardStyles.g.cs

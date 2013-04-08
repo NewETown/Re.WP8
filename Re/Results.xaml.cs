@@ -1,25 +1,18 @@
-﻿using System;
+﻿using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
+using Re.Common;
+using Re.Model;
+using Re.ViewModels;
+using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Navigation;
-using System.Xml.Linq;
-using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
-using Re.Common;
-using Re.Model;
-using Re.ViewModels;
 
 namespace Re
 {
@@ -162,7 +155,6 @@ namespace Re
         void UpdateApplicationBar()
         {
             reSearchButton.IsEnabled = ((lbxOutput.SelectedItems != null) && (lbxOutput.SelectedItems.Count > 0));
-            //openMultiPageButton.IsEnabled = ((lbxOutput.SelectedItems != null) && (lbxOutput.SelectedItems.Count > 0));
         }
 
         void openMultiPageButton_Click(object sender, EventArgs e)
@@ -183,9 +175,55 @@ namespace Re
             }
         }
 
-        async void reSearchButton_Click(object sender, EventArgs e)
+        void reSearchButton_Click(object sender, EventArgs e)
         {
-            string searchTerms = await ResultViewModel.CallAsync(new Uri("http://www.google.com", UriKind.Absolute));
+            string _title = "";
+            List<string> _tWords = new List<string>();
+            bool wordFound = false;
+
+            foreach (WebResult result in lbxOutput.SelectedItems)
+            {
+                _title = ResultViewModel.RemoveStopWords(result.Title);
+
+                _tWords.Clear();
+
+                _tWords = _title.Split(',').ToList<string>();
+
+                wordFound = false;
+
+                for (int i = 0; i < _tWords.Count; i++)
+                    _tWords[i] = _tWords[i].Trim();
+
+                foreach (string word in _tWords)
+                {
+                    foreach (Keyword kw in queryList)
+                    {
+                        if (kw.Word == word)
+                        {
+                            kw.AddCount();
+                            wordFound = true;
+                            break;
+                        }
+                        wordFound = false;
+                    }
+
+                    if (!wordFound)
+                        queryList.Add(new Keyword(word));
+                }
+            }
+
+            string query = "";
+
+            foreach (Keyword k in queryList.Take(7))
+            {
+                query += k.Word + " ";
+            }
+
+            string _searchTerm = Uri.EscapeDataString(query);
+
+            _viewModel.FetchSearchResults(_searchTerm);
+
+            lbxOutput.EnforceIsSelectionEnabled = false;
         }
 
         void resultMultiSelectButton_Click(object sender, EventArgs e)

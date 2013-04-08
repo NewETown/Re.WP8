@@ -37,7 +37,9 @@
                  VerticalAlignment="Center"
                  MinWidth="320"
                  MaxWidth="600"
-                 Background="White" />
+                 Background="White"
+                 InputScope="Search" KeyDown="OnKeyDown"
+                 />
 
         <Image Height="48" 
                Width="63" 

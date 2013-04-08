@@ -48,9 +48,9 @@ namespace Re
                     return;
                 }
 
-                this.Focus();
+                //this.Focus();
 
-                NavigationService.Navigate(new Uri("/Results.xaml?query=" + searchInputText.Text.Trim(), UriKind.Relative));
+                NavigationService.Navigate(new Uri("/Results.xaml?query=" + _searchTerms, UriKind.Relative));
             }
         }
 

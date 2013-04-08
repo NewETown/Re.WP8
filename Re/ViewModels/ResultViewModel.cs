@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Re.Common;
+using Re.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -11,10 +13,6 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Xml.Linq;
-using HtmlAgilityPack;
-using Re.Common;
-using Re.Model;
-
 
 namespace Re.ViewModels
 {
@@ -127,7 +125,7 @@ namespace Re.ViewModels
             }
         }
 
-        private static string RemoveStopWords(string input)
+        public static string RemoveStopWords(string input)
         {
             // These are the words to remove to make the keywords more useful
             var stopWords = new HashSet<string> { "a", "about", "above", "above", "across", "after", "afterwards", "again", "against", "all",
@@ -157,7 +155,7 @@ namespace Re.ViewModels
                                         "was", "we", "well", "were", "what", "whatever", "when", "whence", "whenever", "where", "whereafter", "whereas",
                                         "whereby", "wherein", "whereupon", "wherever", "whether", "which", "while", "whither", "who", "whoever", "whole",
                                         "whom", "whose", "why", "will", "with", "within", "without", "would", "yet", "you", "your", "yours", "yourself",
-                                        "yourselves", "the" };
+                                        "yourselves", "the", "com"};
 
             //input = new string(input.Replace(',', ' ').ToCharArray().Where(c => !char.IsPunctuation(c)).ToArray());
 
@@ -179,6 +177,7 @@ namespace Re.ViewModels
         {
             WebClient client = new WebClient();
             string response = await client.DownloadStringTaskAsync(uri);
+
             var words = RemoveStopWords(response);
             return words;
         }
