@@ -214,6 +214,10 @@ namespace Re
 
             string query = "";
 
+            queryList = queryList.OrderBy(i => i.Count).ThenBy(i => i.Word).ToList<Keyword>();
+
+            queryList.Reverse();
+
             foreach (Keyword k in queryList.Take(7))
             {
                 query += k.Word + " ";
