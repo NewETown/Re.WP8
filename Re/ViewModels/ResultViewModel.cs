@@ -103,11 +103,11 @@ namespace Re.ViewModels
                                                      Url = r.Element(xmlns + "Url").Value
                                                  };
 
-                results.ToList();
+                List<WebResult> list = results.ToList();
 
                 Deployment.Current.Dispatcher.BeginInvoke(() =>
                 {
-                    foreach (var item in results)
+                    foreach (var item in list)
                     {
                         this.WebResultCollection.Add(item);
                     }
@@ -155,7 +155,7 @@ namespace Re.ViewModels
                                         "was", "we", "well", "were", "what", "whatever", "when", "whence", "whenever", "where", "whereafter", "whereas",
                                         "whereby", "wherein", "whereupon", "wherever", "whether", "which", "while", "whither", "who", "whoever", "whole",
                                         "whom", "whose", "why", "will", "with", "within", "without", "would", "yet", "you", "your", "yours", "yourself",
-                                        "yourselves", "the", "com"};
+                                        "yourselves", "the", "com", "net"};
 
             //input = new string(input.Replace(',', ' ').ToCharArray().Where(c => !char.IsPunctuation(c)).ToArray());
 

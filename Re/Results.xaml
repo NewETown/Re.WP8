@@ -27,8 +27,8 @@
                             Tap="ResultItemSelected">
                     <Grid>
                         <Grid.RowDefinitions>
+                            <RowDefinition Height=".4*" />
                             <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
@@ -58,35 +58,17 @@
         * Row 1 contains the rest of the page layout
         -->
         <Grid.RowDefinitions>
-            <RowDefinition Height=".15*" />
+            <RowDefinition Height=".2*" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-
-        <!-- Back button and page title -->
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        
+        <TextBlock x:Name="searchTerms"
+                   Text="{Binding}"
+                   Grid.Row="0"
+                   TextWrapping="NoWrap"
+                   FontWeight="Bold"
+                   />
             
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Re:Search - Results" />
-            
-        </Grid>
-
-        <!--
-        <phone:LongListSelector 
-            Grid.Row="1"
-            x:Name="lbxOutput"
-            DataContext="{StaticResource viewModel}"
-            ItemsSource="{Binding WebResultCollection}"
-            ItemTemplate="{StaticResource ResultItemTemplate}"
-            GridCellSize="225, 150"
-            LayoutMode="Grid"
-            ListFooter="{Binding}"
-            SelectionChanged="lbxOutput_SelectionChanged"
-            />
-        -->
         <toolkit:LongListMultiSelector
             Grid.Row="1"
             x:Name="lbxOutput"
@@ -99,26 +81,6 @@
             IsSelectionEnabledChanged="OnGridSelectorIsSelectionEnabledChanged"
             SelectionChanged="lbxOutput_SelectionChanged"
             />
-        
-        <!--
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" x:Name="btnReSearch" Content="Re:Search" />
-            <Button Grid.Column="1" x:Name="btnViewPages" Content="View Pages" />
-            <ListBox Grid.Column="3" x:Name="gvwQuery" SelectionMode="Multiple" Height="50" VerticalAlignment="Center">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding Word}" Height="50" Padding="0,0,10,0" />
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </Grid>
-        -->
 
     </Grid>
 

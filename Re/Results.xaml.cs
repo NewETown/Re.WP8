@@ -85,9 +85,9 @@ namespace Re
                 query += k.Word + " ";
             }
 
-            _searchTerm = Uri.EscapeDataString(query);
+            searchTerms.DataContext = query;
 
-            _viewModel.FetchSearchResults(_searchTerm);
+            _viewModel.FetchSearchResults(Uri.EscapeDataString(query));
             // gvwQuery.ItemsSource = queryList.Take(7); // This is the databinding for the query text
         }
 
@@ -223,9 +223,9 @@ namespace Re
                 query += k.Word + " ";
             }
 
-            string _searchTerm = Uri.EscapeDataString(query);
+            searchTerms.DataContext = query;
 
-            _viewModel.FetchSearchResults(_searchTerm);
+            _viewModel.FetchSearchResults(Uri.EscapeDataString(query));
 
             lbxOutput.EnforceIsSelectionEnabled = false;
         }
@@ -257,6 +257,14 @@ namespace Re
             }
         }
         #endregion
+
+        public string SearchTerms
+        {
+            get
+            {
+                return this._searchTerm;
+            }
+        }
 
         private void ResultItemSelected(object sender, System.Windows.Input.GestureEventArgs e)
         {

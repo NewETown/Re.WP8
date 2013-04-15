@@ -94,3 +94,4 @@ C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\Microsoft.Thread
 C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\Microsoft.Threading.Tasks.xml
 C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
 C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\Microsoft.Threading.Tasks.Extensions.Phone.xml
+C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\Properties\WMAppManifest.xml
