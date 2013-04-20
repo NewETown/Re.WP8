@@ -13,6 +13,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Navigation;
+using Microsoft.Advertising;
+using Windows.ApplicationModel.Store;
+using Microsoft.Advertising.Mobile.UI;
 
 namespace Re
 {
@@ -74,11 +77,13 @@ namespace Re
 
             foreach (string word in query.Split(' '))
             {
-                queryList.Add(new Keyword(word, 2));
+                queryList.Add(new Keyword(word.ToLower(), 2));
             }
 
             // Reset the query because we're going to modify it
             query = "";
+
+            QueryStringLogic();
 
             foreach (Keyword k in queryList.Take(7))
             {
@@ -88,7 +93,6 @@ namespace Re
             searchTerms.DataContext = query;
 
             _viewModel.FetchSearchResults(Uri.EscapeDataString(query));
-            // gvwQuery.ItemsSource = queryList.Take(7); // This is the databinding for the query text
         }
 
         private void lbxOutput_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -191,8 +195,13 @@ namespace Re
 
                 wordFound = false;
 
+                string _s = "";
                 for (int i = 0; i < _tWords.Count; i++)
-                    _tWords[i] = _tWords[i].Trim();
+                {
+                    _s = _tWords[i].Trim();
+                    _s = _s.ToLower();
+                    _tWords[i] = _s;
+                }
 
                 foreach (string word in _tWords)
                 {
@@ -218,6 +227,8 @@ namespace Re
 
             queryList.Reverse();
 
+            QueryStringLogic();
+
             foreach (Keyword k in queryList.Take(7))
             {
                 query += k.Word + " ";
@@ -228,6 +239,47 @@ namespace Re
             _viewModel.FetchSearchResults(Uri.EscapeDataString(query));
 
             lbxOutput.EnforceIsSelectionEnabled = false;
+        }
+
+        private void QueryStringLogic()
+        {
+            // This function is some seriously fuzzy logic that attempts to further remove unnecessary keywords
+
+            Keyword kw = new Keyword();
+            bool trip = false;
+            int loc = 0; // The location of the found word
+            string _tHolder = "";
+
+            // Each bool below results in some flag being tripped that may or may not remove the word from the query list
+            for (int i = 0; i < queryList.Count() - 1; i++)
+            {
+                _tHolder = queryList[i].Word;
+
+                foreach (Keyword currKw in queryList)
+                {
+                    if (String.Equals(_tHolder+"s", currKw.Word))
+                    {
+                        // If the word is a plural version of the first word then we need to drop it
+                        trip = true;
+                        break;
+                    }
+
+                    if (String.Equals(_tHolder + "es", currKw.Word))
+                    {
+                        // If the word is a plural version of the first word then we need to drop it
+                        trip = true;
+                        break;
+                    }
+
+                    loc++;
+                }
+
+                if (trip)
+                    queryList.RemoveAt(loc);
+
+                loc = 0;
+            }
+            
         }
 
         void resultMultiSelectButton_Click(object sender, EventArgs e)

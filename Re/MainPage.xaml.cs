@@ -4,7 +4,9 @@ using System.Windows.Navigation;
 using Microsoft.Devices;
 using Microsoft.Phone.Controls;
 using Re.ViewModels;
-
+using Microsoft.Advertising;
+using Windows.ApplicationModel.Store;
+using Microsoft.Advertising.Mobile.UI;
 
 namespace Re
 {

@@ -1,11 +1,14 @@
 Compile filter specified.  Only the following files will be processed:
 c:\users\administrator\desktop\repositories\re.wp8\re\bin\debug\mdil\re.dll
+c:\users\administrator\desktop\repositories\re.wp8\re\bin\debug\mdil\en-ca\re.resources.dll
 Processing file: C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\HtmlAgilityPack.dll
 File C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\HtmlAgilityPack.dll is not in the compile filter. Skipping.
 Processing file: C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\Microsoft.Advertising.Mobile.dll
 File C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\Microsoft.Advertising.Mobile.dll is not in the compile filter. Skipping.
 Processing file: C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\Microsoft.Advertising.Mobile.UI.dll
 File C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\Microsoft.Advertising.Mobile.UI.dll is not in the compile filter. Skipping.
+Processing file: C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\Microsoft.Phone.Controls.Maps.dll
+File C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\Microsoft.Phone.Controls.Maps.dll is not in the compile filter. Skipping.
 Processing file: C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\Microsoft.Phone.Controls.Toolkit.dll
 File C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\Microsoft.Phone.Controls.Toolkit.dll is not in the compile filter. Skipping.
 Processing file: C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\Microsoft.Threading.Tasks.dll
@@ -26,3 +29,5 @@ MDIL image C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\obj\Debug\MDIL\
 File C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\Re.dll output C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\obj\Debug\MDIL\Re.dll
 Processing file: C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\WMAppManifest.xml
 File C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\WMAppManifest.xml is not in the compile filter. Skipping.
+Processing file: C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\en-CA\Re.resources.dll
+File C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Debug\MDIL\en-CA\Re.resources.dll is not an IL assembly. Copying.

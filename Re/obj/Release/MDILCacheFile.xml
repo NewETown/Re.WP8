@@ -1,34 +1,44 @@
-﻿<xapCache source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Bin\Release\Re_Release_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="3/17/2013 6:37:55 PM">
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\obj\Release\Re.dll" archivePath="Re.dll" lastWriteTime="3/17/2013 6:37:54 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\glass.png" archivePath="glass.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\logo.png" archivePath="logo.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="3/17/2013 2:33:15 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\ReLogo.png" archivePath="ReLogo.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\smalllogo.png" archivePath="smalllogo.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\splashscreen.png" archivePath="splashscreen.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\storelogo.png" archivePath="storelogo.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\ReLogo_66.png" archivePath="ReLogo_66.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="3/17/2013 2:33:15 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="3/17/2013 2:33:15 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="3/17/2013 2:33:15 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="3/17/2013 2:33:15 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Toolkit.Content\ApplicationBar.Upload.png" archivePath="Toolkit.Content\ApplicationBar.Upload.png" lastWriteTime="3/17/2013 3:21:18 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="3/17/2013 6:37:55 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Bin\Release\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="2/25/2013 10:24:31 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="2/25/2013 10:24:31 PM" />
+﻿<xapCache source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Release\Re_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="4/16/2013 11:05:23 PM">
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\obj\Release\Re.dll" archivePath="Re.dll" lastWriteTime="4/16/2013 11:05:23 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\glass.png" archivePath="glass.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\logo.png" archivePath="logo.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\ReLogo.png" archivePath="ReLogo.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\smalllogo.png" archivePath="smalllogo.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\splashscreen.png" archivePath="splashscreen.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\storelogo.png" archivePath="storelogo.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\ReLogo_66.png" archivePath="ReLogo_66.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Toolkit.Content\ApplicationBar.Upload.png" archivePath="Toolkit.Content\ApplicationBar.Upload.png" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="4/16/2013 11:05:23 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Release\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Release\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Release\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Release\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Release\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="3/31/2013 2:22:06 PM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.dll" archivePath="Microsoft.Advertising.Mobile.dll" lastWriteTime="9/10/2012 10:43:36 AM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI.dll" archivePath="Microsoft.Advertising.Mobile.UI.dll" lastWriteTime="9/10/2012 10:43:36 AM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.UI.xml" archivePath="Microsoft.Advertising.Mobile.UI.xml" lastWriteTime="7/20/2012 8:57:18 AM" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.0\ExtensionSDKs\MSAdvertising\6.1\References\CommonConfiguration\neutral\Microsoft.Advertising.Mobile.xml" archivePath="Microsoft.Advertising.Mobile.xml" lastWriteTime="7/20/2012 8:57:18 AM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\packages\HtmlAgilityPack.1.4.6\lib\sl4-windowsphone71\HtmlAgilityPack.dll" archivePath="HtmlAgilityPack.dll" lastWriteTime="2/26/2013 10:15:03 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\packages\WPtoolkit.4.2012.10.30\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="3/17/2013 2:33:15 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\packages\Newtonsoft.Json.4.5.11\lib\sl4-windowsphone71\Newtonsoft.Json.dll" archivePath="Newtonsoft.Json.dll" lastWriteTime="3/10/2013 6:46:08 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\packages\HtmlAgilityPack.1.4.6\lib\sl4-windowsphone71\HtmlAgilityPack.xml" archivePath="HtmlAgilityPack.xml" lastWriteTime="2/26/2013 10:15:03 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\packages\Newtonsoft.Json.4.5.11\lib\sl4-windowsphone71\Newtonsoft.Json.xml" archivePath="Newtonsoft.Json.xml" lastWriteTime="3/10/2013 6:46:08 PM" />
-  <file source="C:\Users\NewETown\Documents\GitHub\Re.WP8\Re\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="3/17/2013 6:37:55 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\packages\HtmlAgilityPack.1.4.6\lib\sl4-windowsphone71\HtmlAgilityPack.dll" archivePath="HtmlAgilityPack.dll" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\packages\WPtoolkit.4.2012.10.30\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\packages\Microsoft.Bcl.Async.1.0.14-rc\lib\wp8\Microsoft.Threading.Tasks.dll" archivePath="Microsoft.Threading.Tasks.dll" lastWriteTime="4/3/2013 10:13:57 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\packages\Microsoft.Bcl.Async.1.0.14-rc\lib\wp8\Microsoft.Threading.Tasks.Extensions.dll" archivePath="Microsoft.Threading.Tasks.Extensions.dll" lastWriteTime="4/3/2013 10:13:57 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\packages\Microsoft.Bcl.Async.1.0.14-rc\lib\wp8\Microsoft.Threading.Tasks.Extensions.Phone.dll" archivePath="Microsoft.Threading.Tasks.Extensions.Phone.dll" lastWriteTime="4/3/2013 10:13:57 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\packages\HtmlAgilityPack.1.4.6\lib\sl4-windowsphone71\HtmlAgilityPack.xml" archivePath="HtmlAgilityPack.xml" lastWriteTime="3/31/2013 2:22:07 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\packages\Microsoft.Bcl.Async.1.0.14-rc\lib\wp8\Microsoft.Threading.Tasks.xml" archivePath="Microsoft.Threading.Tasks.xml" lastWriteTime="4/3/2013 10:13:57 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\packages\Microsoft.Bcl.Async.1.0.14-rc\lib\wp8\Microsoft.Threading.Tasks.Extensions.xml" archivePath="Microsoft.Threading.Tasks.Extensions.xml" lastWriteTime="4/3/2013 10:13:57 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\packages\Microsoft.Bcl.Async.1.0.14-rc\lib\wp8\Microsoft.Threading.Tasks.Extensions.Phone.xml" archivePath="Microsoft.Threading.Tasks.Extensions.Phone.xml" lastWriteTime="4/3/2013 10:13:57 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="3/31/2013 2:22:06 PM" />
+  <file source="C:\Users\Administrator\Desktop\Repositories\Re.WP8\Re\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="4/16/2013 11:05:23 PM" />
 </xapCache>

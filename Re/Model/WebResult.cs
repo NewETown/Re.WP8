@@ -94,7 +94,7 @@ namespace Re.Model
         {
             get
             {
-                string[] colorArray = { "FFA200FF", "FFFF0097", "FF00ABA9", "FF8CBF26", "FFA05000", "FFE671B8", "FFF09609", "FF1BA1E2", "FFE51400", "FF339933" };
+                string[] colorArray = { "6DC2E9", "00D8CC", "55D455" }; // "CAEAEA", "87CEFA", "66CDAA", "90EE90" };
                 Random random = new Random();
                 int num = random.Next(0, (colorArray.Length - 1));
                 return "#" + colorArray[num];
