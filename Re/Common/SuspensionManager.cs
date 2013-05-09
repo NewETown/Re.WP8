@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
 using System.Threading.Tasks;
-using Windows.ApplicationModel;
-using Windows.Storage;
-using Windows.Storage.Streams;
 using System.Windows;
 using System.Windows.Controls;
+using Windows.Storage;
+using Windows.Storage.Streams;
 
 namespace Re.Common
 {

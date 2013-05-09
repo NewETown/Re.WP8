@@ -98,7 +98,7 @@ namespace Re
             if (Debugger.IsAttached)
             {
                 // An unhandled exception has occurred; break into the debugger
-                Debug.WriteLine(e.ToString());
+                Debug.WriteLine(e.ExceptionObject.ToString());
                 Debugger.Break();
             }
         }

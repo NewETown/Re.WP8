@@ -13,9 +13,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Navigation;
-using Microsoft.Advertising;
-using Windows.ApplicationModel.Store;
-using Microsoft.Advertising.Mobile.UI;
 
 namespace Re
 {
@@ -75,9 +72,30 @@ namespace Re
             // To ensure that users aren't searching for weird things that they don't expect, we need to clear the list
             queryList.Clear();
 
+            List<string> _tWords = new List<string>();
+            bool wordFound = false;
+
             foreach (string word in query.Split(' '))
             {
-                queryList.Add(new Keyword(word.ToLower(), 2));
+                _tWords.Add(word);
+                //queryList.Add(new Keyword(word.ToLower(), 2));
+            }
+
+            foreach (string w in _tWords)
+            {
+                foreach (Keyword kw in queryList)
+                {
+                    if (kw.Word == w)
+                    {
+                        kw.AddCount();
+                        wordFound = true;
+                        break;
+                    }
+                    wordFound = false;
+                }
+
+                if (!wordFound)
+                    queryList.Add(new Keyword(w.ToLower(), 2));
             }
 
             // Reset the query because we're going to modify it
@@ -217,7 +235,7 @@ namespace Re
                     }
 
                     if (!wordFound)
-                        queryList.Add(new Keyword(word));
+                        queryList.Add(new Keyword(word.ToLower()));
                 }
             }
 
@@ -276,6 +294,8 @@ namespace Re
 
                 if (trip)
                     queryList.RemoveAt(loc);
+
+                trip = false;
 
                 loc = 0;
             }

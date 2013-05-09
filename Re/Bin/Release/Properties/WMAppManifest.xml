@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{21c429b7-450b-4e8a-b004-dcded2288df1}" Title="Re" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Re author" Description="Sample description" Publisher="Re" PublisherID="{db67fd1c-b80c-46bb-b675-51db259ac880}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+  <Languages xmlns="">
+    <Language code="en-CA" />
+  </Languages>
+  <App xmlns="" ProductID="{21c429b7-450b-4e8a-b004-dcded2288df1}" Title="Re:" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Mental Tangent" Description="Sample description" Publisher="Mental Tangent" PublisherID="{db67fd1c-b80c-46bb-b675-51db259ac880}">
+    <IconPath IsRelative="true" IsResource="false">logo.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -21,10 +24,10 @@
     <Tokens>
       <PrimaryToken TokenID="ReToken" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\storelogo.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>Re</Title>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\ReLogo.png</BackgroundImageURI>
+          <Title>Re:</Title>
           <BackContent></BackContent>
           <BackBackgroundImageURI></BackBackgroundImageURI>
           <BackTitle></BackTitle>

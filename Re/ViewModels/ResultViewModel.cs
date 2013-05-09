@@ -58,7 +58,7 @@ namespace Re.ViewModels
 
             IsLoading = true;
 
-            String strBingAppID = "xmGJ+CFOgZtjSJhZWOb0QnxTa3KBu3LFB1I8Fd+pQPU=";
+            String strBingAppID = "KI9dRpoInpg6V5b1CBI/bImTwPris6NULbXyFG/nZsk=";
             var byteArray = Encoding.UTF8.GetBytes(strBingAppID + ":" + strBingAppID);
             // Everything in mobile is a URI, so we make a URI
             Uri uri = new Uri("https://api.datamarket.azure.com/Bing/Search/v1/Web?Query=%27" + _searchTerms.Trim(' ') + "%27&$top=40");

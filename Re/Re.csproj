@@ -95,14 +95,11 @@
     <Compile Include="Common\BindableBase.cs" />
     <Compile Include="Common\HttpExtensions.cs" />
     <Compile Include="Common\Keyword.cs" />
-    <Compile Include="Common\LayoutAwarePage.cs" />
     <Compile Include="Common\RequestState.cs" />
-    <Compile Include="Common\RichTextColumn.cs" />
     <Compile Include="Common\StandardStyles.xaml.cs">
       <DependentUpon>StandardStyles.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\SuspensionManager.cs" />
-    <Compile Include="HttpHelper.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -188,12 +185,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack">
-      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\sl4-windowsphone71\HtmlAgilityPack.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="microsoft.advertising.mobile.ui, Version=6.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.Phone.Controls.Maps, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPtoolkit.4.2012.10.30\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
